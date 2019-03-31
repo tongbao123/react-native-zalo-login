@@ -1,0 +1,36 @@
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+   
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+  
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.facebook.react:react-native:+'
+    implementation "com.zing.zalo.zalosdk:core:2.4.2501"
+    implementation "com.zing.zalo.zalosdk:auth:2.4.2501"
+}
+  
